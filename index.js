@@ -20,7 +20,7 @@ app.use("/bookings",bookingRoutes);
 app.use("/users",userRoutes);
 
 // Mongoose Setup
-const PORT = 3001;
+const PORT =process.env.PORT || 3001;
 mongoose
   .connect(process.env.MONGO_URL, {
     dbName: "Book_My_Home",
